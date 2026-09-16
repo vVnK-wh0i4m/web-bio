@@ -1,79 +1,79 @@
-# Customization Guide
+# Hướng dẫn Tuỳ chỉnh
 
-This guide covers everything you need to personalize your bio page.
+Hướng dẫn này bao gồm mọi thứ bạn cần để cá nhân hoá trang bio của mình.
 
 ---
 
-## 1. Profile Picture
+## 1. Ảnh hồ sơ
 
 **File:** `assets/pfp/default.jpg`
 
-Replace this file with your own photo. Recommended specs:
-- Format: JPG or PNG
-- Size: 300x300px or larger (square aspect ratio)
-- Max file size: 500KB for fast loading
+Thay file này bằng ảnh của bạn. Thông số khuyến nghị:
+- Định dạng: JPG hoặc PNG
+- Kích thước: 300x300px hoặc lớn hơn (tỷ lệ vuông)
+- Dung lượng tối đa: 500KB để tải nhanh
 
 ---
 
-## 2. Username
+## 2. Tên người dùng
 
-The username appears with a typing animation effect.
+Tên hiển thị kèm hiệu ứng gõ chữ.
 
-### Where to change it:
+### Nơi thay đổi:
 
-**`index.html`** (line ~52):
+**`index.html`** (dòng ~52):
 ```html
 <span id="username">Your Name</span>
 ```
 
-**`assets/js/script.js`** (line ~11) — Terminal boot screen:
+**`assets/js/script.js`** (dòng ~11) — Màn hình khởi động terminal:
 ```javascript
 "User: Your Name",
 ```
 
-**`assets/js/username-animation.js`** (line ~5) — Typing animation variants:
+**`assets/js/username-animation.js`** (dòng ~5) — Các biến thể hiệu ứng gõ chữ:
 ```javascript
 const usernameVariants = ["Your Name", "Your Alias"];
 ```
-You can add more variants to cycle through.
+Bạn có thể thêm nhiều biến thể hơn để hiển thị xoay vòng.
 
 ---
 
-## 3. Browser Tab Title
+## 3. Tiêu đề tab trình duyệt
 
 **File:** `assets/js/title.js`
 
-Replace the titles array with your own text. Each entry appears for 1 second:
+Thay mảng titles bằng nội dung tuỳ ý. Mỗi mục hiển thị trong 1 giây:
 ```javascript
 var titles = [
-  "Hi",
-  "Welcome",
-  "to my",
-  "profile",
-  "Enjoy!"
+  "Xin",
+  "chào",
+  "đến với",
+  "trang",
+  "của tôi!"
 ];
 ```
 
 ---
 
-## 4. Bio Description
+## 4. Mô tả hồ sơ
 
-**File:** `index.html` (line ~72-75)
+**File:** `index.html` (dòng ~72-75)
 
 ```html
 <p id="user-description" style="color: white;">
-  Hi everyone, I'm Your Name
-  <br>Edit this to describe yourself<br>Add your interests and what you do
+  Xin chào mọi người, mình là Your Name
+  <br>Sửa nội dung này để giới thiệu bản thân<br>Thêm sở thích và lĩnh vực của bạn
 </p>
 ```
 
 ---
 
-## 5. Social Media Links
+## 5. Liên kết mạng xã hội
 
-**File:** `index.html` (lines ~103-119)
+**File:** `index.html` (dòng ~103-119)
 
-Replace each URL with your own:
+Thay từng URL bằng thông tin của bạn:
 
 ```html
 <a href="https://facebook.com/YOUR_ID" target="_blank">
@@ -83,67 +83,67 @@ Replace each URL with your own:
 <a href="mailto:your@email.com" target="_blank">
 ```
 
-To add/remove social icons, copy or delete an `<a>` block. Available Font Awesome icons:
+Để thêm/bớt biểu tượng mạng xã hội, sao chép hoặc xoá một block `<a>`. Các biểu tượng Font Awesome khả dụng:
 - `fa-brands fa-discord`
 - `fa-brands fa-instagram`
 - `fa-brands fa-youtube`
 - `fa-brands fa-linkedin`
 - `fa-brands fa-reddit`
-- See [Font Awesome icons](https://fontawesome.com/icons)
+- Xem [Danh sách biểu tượng Font Awesome](https://fontawesome.com/icons)
 
 ---
 
-## 6. Discord Integration
+## 6. Tích hợp Discord
 
 ### Discord User ID
 
-To show your Discord status, you need your **User ID**:
+Để hiển thị trạng thái Discord, bạn cần **User ID**:
 
-1. Open Discord → Settings → Advanced → Enable **Developer Mode**
-2. Right-click your username → **Copy User ID**
-3. Paste it in two files:
+1. Mở Discord → Cài đặt → Nâng cao → Bật **Chế độ nhà phát triển**
+2. Nhấp chuột phải vào tên người dùng → **Sao chép User ID**
+3. Dán vào hai file:
 
-**`assets/js/lanyard.js`** (line ~2):
+**`assets/js/lanyard.js`** (dòng ~2):
 ```javascript
 const userId = "YOUR_DISCORD_USER_ID";
 ```
 
-**`assets/js/discord.js`** (line ~2):
+**`assets/js/discord.js`** (dòng ~2):
 ```javascript
 const userId = "YOUR_DISCORD_USER_ID";
 ```
 
-### How it works:
-- Uses [Lanyard API](https://docs.lanyard.rest/) to fetch your Discord status
-- Updates every 10 seconds automatically
-- Shows avatar, status (online/idle/dnd/offline), and current activity
-- Also fetches your Discord avatar decoration frame
+### Cách hoạt động:
+- Sử dụng [Lanyard API](https://docs.lanyard.rest/) để lấy trạng thái Discord
+- Tự động cập nhật mỗi 10 giây
+- Hiển thị avatar, trạng thái (online/idle/dnd/offline) và hoạt động hiện tại
+- Cũng lấy khung trang trí avatar Discord của bạn
 
 ---
 
-## 7. Background Video
+## 7. Video nền
 
 **File:** `assets/back/default.mp4`
 
-Replace with your own video. Recommended:
-- Format: MP4 (H.264)
-- Resolution: 1920x1080 or 1280x720
-- Duration: 10-30 seconds (it loops)
-- File size: Keep under 10MB for fast loading
-- Content: Abstract/ambient works best
+Thay bằng video tuỳ ý. Khuyến nghị:
+- Định dạng: MP4 (H.264)
+- Độ phân giải: 1920x1080 hoặc 1280x720
+- Thời lượng: 10-30 giây (video sẽ chạy lặp)
+- Dung lượng: Giữ dưới 10MB để tải nhanh
+- Nội dung: Trừu tượng/trầm lắng thường phù hợp nhất
 
 ---
 
-## 8. Background Music
+## 8. Nhạc nền
 
 **File:** `assets/music/`
 
-Replace the MP3 files in this directory. The player supports:
-- Multiple tracks with shuffle
-- Volume control slider
-- Progress bar
+Thay các file MP3 trong thư mục này. Trình phát hỗ trợ:
+- Nhiều bài hát với chế độ phát ngẫu nhiên
+- Thanh điều chỉnh âm lượng
+- Thanh tiến trình
 
-Supported format: MP3
+Định dạng hỗ trợ: MP3
 
 ---
 
@@ -151,52 +151,52 @@ Supported format: MP3
 
 **File:** `assets/favico/default.jpg`
 
-Replace with your own favicon. Recommended:
-- Format: JPG, PNG, or ICO
-- Size: 32x32px or 64x64px
+Thay bằng favicon tuỳ ý. Khuyến nghị:
+- Định dạng: JPG, PNG hoặc ICO
+- Kích thước: 32x32px hoặc 64x64px
 
 ---
 
-## 10. Badges
+## 10. Huy hiệu
 
 **File:** `assets/badge/`
 
-Badge images displayed under your username:
+Ảnh huy hiệu hiển thị dưới tên người dùng:
 - `developer.png`
 - `love.png`
 - `music.png`
 - `verified.png`
 
-Replace these PNG files or remove the `<img>` tags in `index.html` (lines ~57-60) to hide badges.
+Thay các file PNG này hoặc xoá các thẻ `<img>` trong `index.html` (dòng ~57-60) để ẩn huy hiệu.
 
 ---
 
-## 11. Programming Language Logos
+## 11. Logo ngôn ngữ lập trình
 
 **File:** `assets/logo/`
 
-Language logo images shown on your profile:
+Ảnh logo ngôn ngữ hiển thị trên hồ sơ:
 - `c.png`, `cplusplus.png`, `csharp.png`
 - `java.png`, `matlab.png`, `python.png`
 
-Replace with your own skill logos or remove the `<img>` tags in `index.html` (lines ~63-68).
+Thay bằng logo kỹ năng của bạn hoặc xoá các thẻ `<img>` trong `index.html` (dòng ~63-68).
 
 ---
 
-## 12. Custom CSS
+## 12. CSS tuỳ chỉnh
 
 **File:** `styles.css`
 
-Key CSS variables and sections you can modify:
+Các biến CSS và phần quan trọng bạn có thể sửa:
 
 ```css
-/* Background overlay darkness */
+/* Độ tối của lớp phủ nền */
 #video-overlay { background: rgba(0, 0, 0, 0.5); }
 
-/* Profile card blur */
+/* Độ mờ của thẻ hồ sơ */
 #blurred-box { backdrop-filter: blur(10px); }
 
-/* Username font size */
+/* Cỡ chữ tên người dùng */
 #username { font-size: 32px; }
 ```
 
@@ -204,33 +204,33 @@ Key CSS variables and sections you can modify:
 
 ## 13. ASCII Art
 
-**File:** `assets/js/script.js` (line ~235-250)
+**File:** `assets/js/script.js` (dòng ~235-250)
 
-The `getAsciiArt()` function returns the boot screen art. Replace with your own ASCII art.
+Hàm `getAsciiArt()` trả về nghệ thuật màn hình khởi động. Thay bằng ASCII art tuỳ ý.
 
 ---
 
-## 14. Music Player Behavior
+## 14. Hành vi trình phát nhạc
 
 **File:** `assets/js/music.js`
 
-The music player auto-starts when the user presses Enter or clicks the terminal. It shuffles through tracks. Edit this file to change behavior.
+Trình phát nhạc tự động bắt đầu khi người dùng nhấn Enter hoặc nhấp vào terminal. Phát ngẫu nhiên qua các bài hát. Chỉnh sửa file này để thay đổi hành vi.
 
 ---
 
-## File Checklist
+## Danh sách kiểm tra
 
-After customization, verify these files are updated:
+Sau khi tuỳ chỉnh, hãy kiểm tra các file sau đã được cập nhật:
 
-| File | What to check |
-|------|---------------|
-| `index.html` | Username, bio, social links |
-| `assets/js/script.js` | Terminal username |
-| `assets/js/username-animation.js` | Username variants |
-| `assets/js/title.js` | Browser tab titles |
+| File | Cần kiểm tra |
+|------|--------------|
+| `index.html` | Tên, bio, liên kết mạng xã hội |
+| `assets/js/script.js` | Tên trong terminal |
+| `assets/js/username-animation.js` | Các biến thể tên |
+| `assets/js/title.js` | Tiêu đề tab trình duyệt |
 | `assets/js/lanyard.js` | Discord User ID |
 | `assets/js/discord.js` | Discord User ID |
-| `assets/pfp/default.jpg` | Your profile picture |
-| `assets/back/default.mp4` | Your background video |
-| `assets/music/*.mp3` | Your music files |
-| `assets/favico/default.jpg` | Your favicon |
+| `assets/pfp/default.jpg` | Ảnh hồ sơ của bạn |
+| `assets/back/default.mp4` | Video nền của bạn |
+| `assets/music/*.mp3` | File nhạc của bạn |
+| `assets/favico/default.jpg` | Favicon của bạn |

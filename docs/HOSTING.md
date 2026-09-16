@@ -1,146 +1,146 @@
-# Hosting Guide
+# Hướng dẫn Hosting
 
-Bio Web is a **static website** — no server, no database, no build step. You can host it anywhere that serves HTML files.
+Bio Web là một **trang web tĩnh** — không cần server, không cơ sở dữ liệu, không cần build. Bạn có thể host ở bất kỳ đâu hỗ trợ file HTML.
 
 ---
 
-## Option 1: GitHub Pages (Recommended — Free)
+## Lựa chọn 1: GitHub Pages (Khuyến nghị — Miễn phí)
 
-### Steps:
+### Các bước:
 
-1. **Create a GitHub account** at [github.com](https://github.com)
+1. **Tạo tài khoản GitHub** tại [github.com](https://github.com)
 
-2. **Create a new repository**
-   - Name it: `your-username.github.io` (for main site)
-   - Or any name like `bio` (for `your-username.github.io/bio`)
+2. **Tạo repository mới**
+   - Đặt tên: `ten-cua-ban.github.io` (cho trang chính)
+   - Hoặc bất kỳ tên nào như `bio` (cho `ten-cua-ban.github.io/bio`)
 
-3. **Upload your files**
+3. **Tải file lên**
    ```bash
    git init
    git add .
    git commit -m "Initial commit"
    git branch -M main
-   git remote add origin https://github.com/YOUR_USERNAME/YOUR_REPO.git
+   git remote add origin https://github.com/TEN_CUA_BAN/TEN_REPO.git
    git push -u origin main
    ```
 
-4. **Enable GitHub Pages**
-   - Go to repo → Settings → Pages
-   - Source: `main` branch
-   - Click Save
+4. **Bật GitHub Pages**
+   - Vào repo → Settings → Pages
+   - Source: nhánh `main`
+   - Nhấn Save
 
-5. **Your site is live at:**
-   - `https://YOUR_USERNAME.github.io` (if repo is `your-username.github.io`)
-   - `https://YOUR_USERNAME.github.io/REPO_NAME` (otherwise)
+5. **Trang của bạn đã trực tuyến tại:**
+   - `https://ten-cua-ban.github.io` (nếu repo là `ten-cua-ban.github.io`)
+   - `https://ten-cua-ban.github.io/TEN_REPO` (ngược lại)
 
-### Custom Domain (Optional):
+### Tên miền tuỳ chọn:
 
-1. Buy a domain (e.g., from Namecheap, Cloudflare)
-2. Edit the `CNAME` file in your repo, add your domain:
+1. Mua tên miền (ví dụ từ Namecheap, Cloudflare)
+2. Sửa file `CNAME` trong repo, thêm tên miền:
    ```
-   yourdomain.com
+   tendomaincuaban.com
    ```
-3. In your domain DNS settings, add:
-   - Type: `CNAME`
-   - Name: `@` or `www`
-   - Value: `YOUR_USERNAME.github.io`
-4. Wait 5-30 minutes for propagation
+3. Trong cài đặt DNS của tên miền, thêm:
+   - Loại: `CNAME`
+   - Name: `@` hoặc `www`
+   - Giá trị: `ten-cua-ban.github.io`
+4. Chờ 5-30 phút để DNS propagte
 
 ---
 
-## Option 2: Netlify (Free)
+## Lựa chọn 2: Netlify (Miễn phí)
 
-### Steps:
+### Các bước:
 
-1. Go to [netlify.com](https://netlify.com) and sign up
+1. Vào [netlify.com](https://netlify.com) và đăng ký
 
-2. **Drag and drop** your project folder onto the deploy area
+2. **Kéo thả** thư mục dự án vào khu vực deploy
 
-3. Or connect GitHub:
-   - Click "Add new site" → Import from Git
-   - Select your repo
-   - Build command: (leave empty)
-   - Publish directory: `.` (dot)
-   - Click "Deploy site"
+3. Hoặc kết nối GitHub:
+   - Nhấn "Add new site" → Import from Git
+   - Chọn repo của bạn
+   - Build command: (để trống)
+   - Publish directory: `.` (dấu chấm)
+   - Nhấn "Deploy site"
 
-4. **Your site gets a URL like:** `https://random-name.netlify.app`
+4. **Trang của bạn sẽ có URL dạng:** `https://ten-ngau-nhien.netlify.app`
 
-5. **Custom domain:**
+5. **Tên miền tuỳ chọn:**
    - Site settings → Domain management → Add custom domain
-   - Follow the DNS instructions
+   - Làm theo hướng dẫn DNS
 
-### Auto-deploy from GitHub:
+### Tự động deploy từ GitHub:
 
-Netlify automatically redeploys when you push to GitHub.
+Netlify tự động redeploy khi bạn push lên GitHub.
 
 ---
 
-## Option 3: Vercel (Free)
+## Lựa chọn 3: Vercel (Miễn phí)
 
-### Steps:
+### Các bước:
 
-1. Go to [vercel.com](https://vercel.com) and sign up with GitHub
+1. Vào [vercel.com](https://vercel.com) và đăng ký bằng GitHub
 
-2. Click **"Add New Project"**
+2. Nhấn **"Add New Project"**
 
-3. Import your GitHub repository
+3. Import repository GitHub của bạn
 
-4. **Configure:**
+4. **Cấu hình:**
    - Framework: `Other`
-   - Build command: (leave empty)
-   - Output directory: `.` (dot)
+   - Build command: (để trống)
+   - Output directory: `.` (dấu chấm)
 
-5. Click **Deploy**
+5. Nhấn **Deploy**
 
-6. **Your site gets a URL like:** `https://your-project.vercel.app`
+6. **Trang của bạn sẽ có URL dạng:** `https://du-an-cua-ban.vercel.app`
 
-7. **Custom domain:**
+7. **Tên miền tuỳ chọn:**
    - Project Settings → Domains → Add
-   - Follow DNS instructions
+   - Làm theo hướng dẫn DNS
 
 ---
 
-## Option 4: Cloudflare Pages (Free)
+## Lựa chọn 4: Cloudflare Pages (Miễn phí)
 
-### Steps:
+### Các steps:
 
-1. Log in to [Cloudflare](https://dash.cloudflare.com)
+1. Đăng nhập [Cloudflare](https://dash.cloudflare.com)
 
-2. Go to **Workers & Pages** → Create → Pages
+2. Vào **Workers & Pages** → Create → Pages
 
-3. **Upload assets** directly or connect GitHub
+3. **Upload trực tiếp** hoặc kết nối GitHub
 
-4. If uploading directly:
-   - Drag your project folder
-   - Click Deploy
+4. Nếu upload trực tiếp:
+   - Kéo thư mục dự án
+   - Nhấn Deploy
 
-5. **Your site gets a URL like:** `https://your-project.pages.dev`
+5. **Trang của bạn sẽ có URL dạng:** `https://du-an-cua-ban.pages.dev`
 
-6. **Custom domain:**
+6. **Tên miền tuỳ chọn:**
    - Custom domains → Set up a custom domain
-   - Add your domain and configure DNS
+   - Thêm tên miền và cấu hình DNS
 
 ---
 
-## Option 5: Traditional Web Hosting (Paid)
+## Lựa chọn 5: Hosting web truyền thống (Trả phí)
 
-Any web hosting that supports HTML works:
+Bất kỳ hosting nào hỗ trợ HTML đều hoạt động:
 
-### Providers:
-- **Hostinger** (~$2/mo)
-- **Bluehost** (~$3/mo)
-- **SiteGround** (~$3/mo)
-- **A2 Hosting** (~$3/mo)
+### Nhà cung cấp:
+- **Hostinger** (~500k/tháng)
+- **Bluehost** (~75k/tháng)
+- **SiteGround** (~75k/tháng)
+- **A2 Hosting** (~75k/tháng)
 
-### Steps:
+### Các steps:
 
-1. Sign up for a hosting plan
+1. Đăng ký gói hosting
 
-2. Access your hosting control panel (cPanel)
+2. Truy cập bảng điều khiển hosting (cPanel)
 
-3. Open **File Manager** → navigate to `public_html/`
+3. Mở **File Manager** → điều hướng đến `public_html/`
 
-4. **Upload all project files** maintaining the folder structure:
+4. **Upload tất cả file dự án**, giữ nguyên cấu trúc thư mục:
    ```
    public_html/
    ├── index.html
@@ -158,81 +158,81 @@ Any web hosting that supports HTML works:
    └── ...
    ```
 
-5. Your site is live at your domain
+5. Trang của bạn đã trực tuyến tại tên miền
 
-### Via FTP:
+### Qua FTP:
 
-1. Get FTP credentials from your hosting provider
-2. Use an FTP client (FileZilla, WinSCP)
-3. Connect and upload to `public_html/`
+1. Lấy thông tin FTP từ nhà cung cấp hosting
+2. Sử dụng client FTP (FileZilla, WinSCP)
+3. Kết nối và upload vào `public_html/`
 
 ---
 
-## Option 6: Local Development
+## Lựa chọn 6: Phát triển cục bộ
 
-### Quick local preview:
+### Xem nhanh trên máy tính:
 
 **Windows:**
 ```bash
-# Using Python
-cd path/to/bio-web
+# Dùng Python
+cd duong-dan/bio-web
 python -m http.server 8000
-# Open http://localhost:8000
+# Mở http://localhost:8000
 
-# Using Node.js (if installed)
+# Dùng Node.js (nếu đã cài)
 npx serve .
 ```
 
 **Mac/Linux:**
 ```bash
-cd path/to/bio-web
+cd duong-dan/bio-web
 python3 -m http.server 8000
-# Open http://localhost:8000
+# Mở http://localhost:8000
 ```
 
 **VS Code:**
-1. Install "Live Server" extension
-2. Right-click `index.html` → "Open with Live Server"
+1. Cài extension "Live Server"
+2. Nhấp chuột phải `index.html` → "Open with Live Server"
 
 ---
 
-## Comparison Table
+## Bảng so sánh
 
-| Platform | Price | Custom Domain | Auto Deploy | Speed |
-|----------|-------|---------------|-------------|-------|
-| GitHub Pages | Free | Yes | Yes (Git) | Good |
-| Netlify | Free | Yes | Yes (Git) | Fast |
-| Vercel | Free | Yes | Yes (Git) | Fast |
-| Cloudflare Pages | Free | Yes | Yes (Git) | Fastest |
-| Traditional Hosting | $2-5/mo | Yes | No (FTP) | Varies |
-
----
-
-## Recommendations
-
-- **For beginners:** GitHub Pages or Netlify (easiest setup)
-- **For best performance:** Cloudflare Pages
-- **For custom domain + email:** Traditional hosting
-- **For quick testing:** Local with Live Server
+| Nền tảng | Giá | Tên miền tuỳ chỉnh | Tự động deploy | Tốc độ |
+|----------|-----|---------------------|-----------------|--------|
+| GitHub Pages | Miễn phí | Có | Có (Git) | Tốt |
+| Netlify | Miễn phí | Có | Có (Git) | Nhanh |
+| Vercel | Miễn phí | Có | Có (Git) | Nhanh |
+| Cloudflare Pages | Miễn phí | Có | Có (Git) | Nhanh nhất |
+| Hosting truyền thống | 500k-1.2tr/tháng | Có | Không (FTP) | Tuỳ chọn |
 
 ---
 
-## Troubleshooting
+## Khuyến nghị
 
-### "Page not found" after deploy
-- Check that `index.html` is in the root of the publish directory
-- For GitHub Pages, ensure the correct branch/folder is selected
+- **Cho người mới:** GitHub Pages hoặc Netlify (dễ thiết lập nhất)
+- **Hiệu suất tốt nhất:** Cloudflare Pages
+- **Tên miền + email:** Hosting truyền thống
+- **Test nhanh:** Local với Live Server
 
-### Music/video not playing
-- Some browsers block autoplay. The site handles this with user interaction (pressing Enter)
-- Ensure file paths are correct (case-sensitive on Linux servers)
+---
 
-### Discord status not showing
-- Verify your Discord User ID is correct in both `lanyard.js` and `discord.js`
-- Your Discord must be open and visible for Lanyard to work
-- Check browser console (F12) for errors
+## Xử lý sự cố
 
-### Images not loading
-- Check file paths are relative (start with `./`)
-- Ensure files are uploaded to the correct directory structure
-- File names are case-sensitive on Linux servers
+### "Page not found" sau khi deploy
+- Kiểm tra `index.html` nằm ở gốc thư mục publish
+- Với GitHub Pages, đảm bảo đã chọn đúng nhánh/thư mục
+
+### Nhạc/video không phát
+- Một số trình duyệt chặn autoplay. Trang xử lý điều này bằng tương tác người dùng (nhấn Enter)
+- Đảm bảo đường dẫn file chính xác (phân biệt hoa/thường trên server Linux)
+
+### Trạng thái Discord không hiển thị
+- Kiểm tra Discord User ID đúng trong cả `lanyard.js` và `discord.js`
+- Discord phải đang mở và hiển thị để Lanyard hoạt động
+- Kiểm tra console trình duyệt (F12) để xem lỗi
+
+### Ảnh không tải
+- Kiểm tra đường dẫn file là tương đối (bắt đầu bằng `./`)
+- Đảm bảo file đã upload đúng cấu trúc thư mục
+- Tên file phân biệt hoa/thường trên server Linux

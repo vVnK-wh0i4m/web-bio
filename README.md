@@ -1,86 +1,86 @@
-# Bio Web - Personal Link-in-Bio Page
+# Bio Web - Trang Liên Kết Cá Nhân
 
-A self-hosted, fully customizable personal bio/link-in-bio webpage template. Share your profile, social links, Discord status, and more — all in one beautiful page.
+Mẫu trang bio/link-in-bio tự host, hoàn toàn có thể tuỳ chỉnh. Chia sẻ hồ sơ, mạng xã hội, trạng thái Discord của bạn — tất cả trong một trang đẹp.
 
-## Preview
+## Xem trước
 
-![Preview](https://i.postimg.cc/524RpJKb/1.png)
+![Xem trước](https://i.postimg.cc/524RpJKb/1.png)
 
-## Features
+## Tính năng
 
-- **Terminal boot animation** with ASCII art and system info
-- **Background music & video** with audio visualizer
-- **Discord live status** via Lanyard API (avatar, status, activity)
-- **Neko cat** desktop pet that follows your cursor
-- **3D tilt effect** on profile card
-- **Typing animation** for username
-- **Animated browser tab title**
-- **Social media links** (Facebook, GitHub, TikTok, X, Email)
-- **Badge system** (Developer, Verified, Music, Love)
-- **Programming language logos** showcase
-- **Fully responsive** — works on mobile & desktop
-- **Zero dependencies** — pure HTML/CSS/JS, no build tools needed
+- **Hiệu ứng khởi động terminal** với ASCII art và thông tin hệ thống
+- **Nhạc & video nền** kèm visualizer âm thanh
+- **Trạng thái Discord trực tuyến** qua Lanyard API (avatar, trạng thái, hoạt động)
+- **Mèo Neko**宠物 theo dõi con trỏ chuột
+- **Hiệu ứng nghiêng 3D** trên thẻ hồ sơ
+- **Hiệu ứng gõ chữ** cho tên người dùng
+- **Tab trình duyệt animation** tự động chuyển
+- **Liên kết mạng xã hội** (Facebook, GitHub, TikTok, X, Email)
+- **Hệ thống huy hiệu** (Developer, Verified, Music, Love)
+- **Logo ngôn ngữ lập trình** hiển thị kỹ năng
+- **Responsive hoàn toàn** — hoạt động trên điện thoại & máy tính
+- **Không phụ thuộc** — HTML/CSS/JS thuần, không cần build
 
-## Quick Start
+## Bắt đầu nhanh
 
-1. **Download** or clone this repository
-2. **Edit** `index.html` — replace `Your Name`, social links, description
-3. **Edit** `assets/js/lanyard.js` and `assets/js/discord.js` — replace `YOUR_DISCORD_USER_ID`
-4. **Replace** your profile picture at `assets/pfp/default.jpg`
-5. **Host** on any static hosting service (see [Hosting Guide](docs/HOSTING.md))
+1. **Tải xuống** hoặc clone repository này
+2. **Sửa** `index.html` — thay `Your Name`, liên kết mạng xã hội, mô tả
+3. **Sửa** `assets/js/lanyard.js` và `assets/js/discord.js` — thay `YOUR_DISCORD_USER_ID`
+4. **Thay** ảnh hồ sơ tại `assets/pfp/default.jpg`
+5. **Triển khai** trên bất kỳ hosting static nào (xem [Hướng dẫn Hosting](docs/HOSTING.md))
 
-## Project Structure
+## Cấu trúc dự án
 
 ```
 bio-web/
-├── index.html                 # Main page
-├── styles.css                 # Main stylesheet
-├── LICENSE                    # MIT License
+├── index.html                 # Trang chính
+├── styles.css                 # Stylesheet chính
+├── LICENSE                    # Giấy phép MIT
 ├── assets/
-│   ├── back/default.mp4       # Background video
-│   ├── badge/                 # Profile badges (PNG)
-│   ├── css/tilt-effect.css    # 3D tilt styles
-│   ├── cursor/neko.png        # Neko cat sprite
+│   ├── back/default.mp4       # Video nền
+│   ├── badge/                 # Huy hiệu hồ sơ (PNG)
+│   ├── css/tilt-effect.css    # CSS hiệu ứng nghiêng 3D
+│   ├── cursor/neko.png        # Sprite mèo Neko
 │   ├── favico/default.jpg     # Favicon
 │   ├── js/
 │   │   ├── audio-visualizer.js
-│   │   ├── discord.js         # Discord avatar frame
-│   │   ├── lanyard.js         # Discord status (Lanyard API)
-│   │   ├── music.js           # Music player
-│   │   ├── neko.js            # Neko cat class
-│   │   ├── neko-init.js       # Neko initialization
-│   │   ├── script.js          # Terminal boot animation
-│   │   ├── tilt-effect.js     # 3D tilt logic
-│   │   ├── title.js           # Browser tab animation
+│   │   ├── discord.js         # Khung avatar Discord
+│   │   ├── lanyard.js         # Trạng thái Discord (Lanyard API)
+│   │   ├── music.js           # Trình phát nhạc
+│   │   ├── neko.js            # Class mèo Neko
+│   │   ├── neko-init.js       # Khởi tạo Neko
+│   │   ├── script.js          # Hiệu ứng khởi động terminal
+│   │   ├── tilt-effect.js     # Logic hiệu ứng nghiêng 3D
+│   │   ├── title.js           # Animation tab trình duyệt
 │   │   └── username-animation.js
-│   ├── logo/                  # Programming language logos
-│   ├── music/                 # Background music (MP3)
-│   └── pfp/default.jpg        # Profile picture
+│   ├── logo/                  # Logo ngôn ngữ lập trình
+│   ├── music/                 # Nhạc nền (MP3)
+│   └── pfp/default.jpg        # Ảnh hồ sơ
 └── docs/
-    ├── CUSTOMIZATION.md       # How to customize
-    ├── HOSTING.md             # Hosting guides
-    └── LICENSE-AND-TERMS.md   # License & terms
+    ├── CUSTOMIZATION.md       # Hướng dẫn tuỳ chỉnh
+    ├── HOSTING.md             # Hướng dẫn hosting
+    └── LICENSE-AND-TERMS.md   # Giấy phép & điều khoản
 ```
 
-## Documentation
+## Tài liệu
 
-| Document | Description |
-|----------|-------------|
-| [Customization Guide](docs/CUSTOMIZATION.md) | How to personalize your bio page |
-| [Hosting Guide](docs/HOSTING.md) | Deploy to GitHub Pages, Netlify, Vercel, etc. |
-| [License & Terms](docs/LICENSE-AND-TERMS.md) | MIT License and usage terms |
+| Tài liệu | Mô tả |
+|----------|--------|
+| [Hướng dẫn Tuỳ chỉnh](docs/CUSTOMIZATION.md) | Cách cá nhân hoá trang bio của bạn |
+| [Hướng dẫn Hosting](docs/HOSTING.md) | Triển khai lên GitHub Pages, Netlify, Vercel, v.v. |
+| [Giấy phép & Điều khoản](docs/LICENSE-AND-TERMS.md) | Giấy phép MIT và điều khoản sử dụng |
 
-## Tech Stack
+## Công nghệ sử dụng
 
-- **HTML5 / CSS3 / Vanilla JavaScript** (no frameworks)
-- **Font Awesome 6.5.0** (icons)
+- **HTML5 / CSS3 / Vanilla JavaScript** (không framework)
+- **Font Awesome 6.5.0** (biểu tượng)
 - **Google Fonts** (Inter, Comic Neue)
-- **vanilla-tilt.js** (3D effects)
-- **Lanyard API** (Discord integration)
-- **Web Audio API** (audio visualizer)
+- **vanilla-tilt.js** (hiệu ứng 3D)
+- **Lanyard API** (tích hợp Discord)
+- **Web Audio API** (visualizer âm thanh)
 
-## License
+## Giấy phép
 
-This project is licensed under the [MIT License](LICENSE).
+Dự án này sử dụng [Giấy phép MIT](LICENSE).
 
-Originally created by [c0mplex](https://github.com/c0mplex07). See [License & Terms](docs/LICENSE-AND-TERMS.md) for details.
+Được tạo ban đầu bởi [c0mplex](https://github.com/c0mplex07). Xem [Giấy phép & Điều khoản](docs/LICENSE-AND-TERMS.md) để biết thêm chi tiết.
