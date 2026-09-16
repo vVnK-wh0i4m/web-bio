@@ -11,7 +11,7 @@ Mẫu trang bio/link-in-bio tự host, hoàn toàn có thể tuỳ chỉnh. Chia
 - **Hiệu ứng khởi động terminal** với ASCII art và thông tin hệ thống
 - **Nhạc & video nền** kèm visualizer âm thanh
 - **Trạng thái Discord trực tuyến** qua Lanyard API (avatar, trạng thái, hoạt động)
-- **Mèo Neko**宠物 theo dõi con trỏ chuột
+- **Mèo Neko** theo dõi con trỏ chuột
 - **Hiệu ứng nghiêng 3D** trên thẻ hồ sơ
 - **Hiệu ứng gõ chữ** cho tên người dùng
 - **Tab trình duyệt animation** tự động chuyển
@@ -23,11 +23,21 @@ Mẫu trang bio/link-in-bio tự host, hoàn toàn có thể tuỳ chỉnh. Chia
 
 ## Bắt đầu nhanh
 
-1. **Tải xuống** hoặc clone repository này
-2. **Sửa** `index.html` — thay `Your Name`, liên kết mạng xã hội, mô tả
-3. **Sửa** `assets/js/lanyard.js` và `assets/js/discord.js` — thay `YOUR_DISCORD_USER_ID`
-4. **Thay** ảnh hồ sơ tại `assets/pfp/default.jpg`
-5. **Triển khai** trên bất kỳ hosting static nào (xem [Hướng dẫn Hosting](docs/HOSTING.md))
+### Tải mã nguồn
+
+📦 [**Tải file ZIP**](https://github.com/vVnK-wh0i4m/web-bio/archive/refs/heads/main.zip)
+
+Hoặc clone bằng Git:
+```bash
+git clone https://github.com/vVnK-wh0i4m/web-bio.git
+```
+
+### Các bước tuỳ chỉnh
+
+1. **Sửa** `index.html` — thay `Your Name`, liên kết mạng xã hội, mô tả
+2. **Sửa** `assets/js/lanyard.js` và `assets/js/discord.js` — thay `YOUR_DISCORD_USER_ID`
+3. **Thay** ảnh hồ sơ tại `assets/pfp/default.jpg`
+4. **Triển khai** trên bất kỳ hosting static nào (xem [Hướng dẫn Hosting](HOSTING.md))
 
 ## Cấu trúc dự án
 
@@ -36,6 +46,9 @@ bio-web/
 ├── index.html                 # Trang chính
 ├── styles.css                 # Stylesheet chính
 ├── LICENSE                    # Giấy phép MIT
+├── CUSTOMIZATION.md           # Hướng dẫn tuỳ chỉnh
+├── HOSTING.md                 # Hướng dẫn hosting
+├── LICENSE-AND-TERMS.md       # Giấy phép & điều khoản
 ├── assets/
 │   ├── back/default.mp4       # Video nền
 │   ├── badge/                 # Huy hiệu hồ sơ (PNG)
@@ -56,19 +69,15 @@ bio-web/
 │   ├── logo/                  # Logo ngôn ngữ lập trình
 │   ├── music/                 # Nhạc nền (MP3)
 │   └── pfp/default.jpg        # Ảnh hồ sơ
-└── docs/
-    ├── CUSTOMIZATION.md       # Hướng dẫn tuỳ chỉnh
-    ├── HOSTING.md             # Hướng dẫn hosting
-    └── LICENSE-AND-TERMS.md   # Giấy phép & điều khoản
 ```
 
 ## Tài liệu
 
 | Tài liệu | Mô tả |
 |----------|--------|
-| [Hướng dẫn Tuỳ chỉnh](docs/CUSTOMIZATION.md) | Cách cá nhân hoá trang bio của bạn |
-| [Hướng dẫn Hosting](docs/HOSTING.md) | Triển khai lên GitHub Pages, Netlify, Vercel, v.v. |
-| [Giấy phép & Điều khoản](docs/LICENSE-AND-TERMS.md) | Giấy phép MIT và điều khoản sử dụng |
+| [Hướng dẫn Tuỳ chỉnh](CUSTOMIZATION.md) | Cách cá nhân hoá trang bio của bạn |
+| [Hướng dẫn Hosting](HOSTING.md) | Triển khai lên GitHub Pages, Netlify, Vercel, v.v. |
+| [Giấy phép & Điều khoản](LICENSE-AND-TERMS.md) | Giấy phép MIT và điều khoản sử dụng |
 
 ## Công nghệ sử dụng
 
@@ -83,4 +92,4 @@ bio-web/
 
 Dự án này sử dụng [Giấy phép MIT](LICENSE).
 
-Được tạo ban đầu bởi [c0mplex](https://github.com/c0mplex07). Xem [Giấy phép & Điều khoản](docs/LICENSE-AND-TERMS.md) để biết thêm chi tiết.
+Được tạo ban đầu bởi [c0mplex](https://github.com/c0mplex07). Xem [Giấy phép & Điều khoản](LICENSE-AND-TERMS.md) để biết thêm chi tiết.
